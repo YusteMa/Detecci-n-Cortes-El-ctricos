@@ -14,14 +14,22 @@ Este proyecto implementa un sistema autónomo basado en **Raspberry Pi** capaz d
 
 ---
 
-## 📁 Estructura del proyecto
+## 🗂️ Estructura del proyecto
 
+```plaintext
 DeteccionCortes_2.0/
-├── SistemaDeteccion/
-│ └── main.py # Código de detección de cortes y envío de correo
-├── servidor.py # Servidor web con Flask
-├── webcontrol.service # Archivo de configuración systemd
-└── webcontrol.log # Log del servidor web
+├── SistemaDeteccion/           # Lógica de detección de cortes
+│   └── main.py                 # Script principal que detecta cortes y envía avisos
+│
+├── static/                     # Archivos estáticos (CSS, imágenes...)
+│   └── style.css               # Estilo de la interfaz web
+│
+├── templates/                  # Plantillas HTML para Flask
+│   └── index.html              # Interfaz principal de control
+│
+├── servidor.py                 # Servidor web Flask que gestiona la activación
+├── webcontrol.service          # Servicio systemd para iniciar el servidor al arrancar
+└── README.md                   # Documentación del proyecto
 
 ---
 
